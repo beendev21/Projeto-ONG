@@ -9,4 +9,4 @@ Projeto web voltado para a divulgação e gestão de iniciativas sociais.
 - Git e GitHub para versionamento
 
 ## 🔗 Links
-- Repositório: https://github.com/beendev21/Projeto-ONG.git
+- Site: https://projeto-ong-pearl.vercel.app/
