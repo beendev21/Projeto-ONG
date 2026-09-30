@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG Esperança - Projetos</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/navigation.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Saltar para o conteúdo principal</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="brand" aria-label="Página inicial da ONG Esperança">
+                <img src="assets/img/logo.jpg" alt="Logotipo da ONG Esperança">
+            </a>
+            <nav class="site-nav" aria-label="Navegação principal">
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation-list" aria-label="Abrir menu de navegação">
+                    <span class="nav-toggle-icon" aria-hidden="true"></span>
+                </button>
+                <ul class="nav-list" id="primary-navigation-list">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li class="has-submenu">
+                        <a href="projetos.html">Projetos</a>
+                        <ul class="submenu" aria-label="Opções de projetos">
+                            <li><a href="projetos.html#projetos-em-andamento">Projetos em andamento</a></li>
+                            <li><a href="cadastro.html">Seja voluntário</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="grid-container">
+            <aside class="notice" role="status" aria-labelledby="participation-notice-title">
+                <div>
+                    <h2 id="participation-notice-title">Quer apoiar este projeto?</h2>
+                    <p>Consulte o cadastro para saber como participar como voluntário.</p>
+                </div>
+                <a class="btn" href="cadastro.html">Ir para cadastro</a>
+            </aside>
+            <section class="main-content main-content--wide" id="projetos-em-andamento" aria-labelledby="projects-title">
+                <h1 id="projects-title">Projetos Sociais em Andamento</h1>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <ul class="badge-list" aria-label="Estado e categoria do projeto">
+                            <li><span class="badge badge--status">Em andamento</span></li>
+                            <li><span class="badge badge--category">Ação social</span></li>
+                        </ul>
+                        <h2>Ação Social Comunitária</h2>
+                        <p>Iniciativa focada na arrecadação e distribuição de alimentos e suprimentos básicos.</p>
+                        <img src="assets/img/projeto-acao-social.jpg" alt="Distribuição de cestas básicas para a comunidade">
+                        <a class="btn" href="cadastro.html">Participar como voluntário</a>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ONG Esperança. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

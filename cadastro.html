@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG Esperança - Cadastro</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/navigation.js" defer></script>
+    <script src="assets/js/registration-modal.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Saltar para o conteúdo principal</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="brand" aria-label="Página inicial da ONG Esperança">
+                <img src="assets/img/logo.jpg" alt="Logotipo da ONG Esperança">
+            </a>
+            <nav class="site-nav" aria-label="Navegação principal">
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation-list" aria-label="Abrir menu de navegação">
+                    <span class="nav-toggle-icon" aria-hidden="true"></span>
+                </button>
+                <ul class="nav-list" id="primary-navigation-list">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li class="has-submenu">
+                        <a href="projetos.html">Projetos</a>
+                        <ul class="submenu" aria-label="Opções de projetos">
+                            <li><a href="projetos.html#projetos-em-andamento">Projetos em andamento</a></li>
+                            <li><a href="cadastro.html">Seja voluntário</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="grid-container">
+            <section class="main-content main-content--wide" aria-labelledby="registration-title">
+                <h1 id="registration-title">Formulário de Cadastro de Voluntário</h1>
+                <p>Preencha seus dados para demonstrar interesse em participar como voluntário.</p>
+                <button class="btn" id="open-registration" type="button">Finalizar Cadastro</button>
+            </section>
+        </div>
+    </main>
+
+    <dialog class="registration-dialog" id="registration-dialog" aria-labelledby="registration-dialog-title">
+        <div class="registration-dialog-header">
+            <h2 id="registration-dialog-title">Cadastro de voluntário</h2>
+            <button class="dialog-close" type="button" aria-label="Fechar formulário">&times;</button>
+        </div>
+        <form class="form-panel" id="registration-form">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <div>
+                    <label for="nome">Nome Completo:</label>
+                    <input class="form-control" type="text" id="nome" name="nome" aria-describedby="nome-error" required minlength="3">
+                    <small class="field-error" id="nome-error" hidden></small>
+                </div>
+
+                <div>
+                    <label for="cpf">CPF:</label>
+                    <input class="form-control" type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" aria-describedby="cpf-hint cpf-error" required title="Formato: 000.000.000-00">
+                    <small class="form-hint" id="cpf-hint">Formato: 000.000.000-00.</small>
+                    <small class="field-error" id="cpf-error" hidden></small>
+                </div>
+
+                <div>
+                    <label for="nascimento">Data de Nascimento:</label>
+                    <input class="form-control" type="date" id="nascimento" name="nascimento" aria-describedby="nascimento-error" required>
+                    <small class="field-error" id="nascimento-error" hidden></small>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Contato</legend>
+
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input class="form-control" type="email" id="email" name="email" aria-describedby="email-error" required>
+                    <small class="field-error" id="email-error" hidden></small>
+                </div>
+
+                <div>
+                    <label for="telefone">Telefone / Celular:</label>
+                    <input class="form-control" type="tel" id="telefone" name="telefone" pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" placeholder="(11) 99999-9999" aria-describedby="phone-hint telefone-error" required title="Formato: (11) 99999-9999">
+                    <small class="form-hint" id="phone-hint">Formato: (11) 99999-9999.</small>
+                    <small class="field-error" id="telefone-error" hidden></small>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço</legend>
+
+                <div>
+                    <label for="cep">CEP:</label>
+                    <input class="form-control" type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="00000-000" aria-describedby="cep-hint cep-error" required title="Formato: 00000-000">
+                    <small class="form-hint" id="cep-hint">Formato: 00000-000.</small>
+                    <small class="field-error" id="cep-error" hidden></small>
+                </div>
+            </fieldset>
+
+            <p class="form-status" id="registration-status" role="status" tabindex="-1" hidden>Os dados foram validados, mas o envio do cadastro ainda não está configurado.</p>
+            <button class="btn" type="submit">Enviar cadastro</button>
+        </form>
+    </dialog>
+
+    <footer>
+        <p>&copy; 2026 ONG Esperança. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
